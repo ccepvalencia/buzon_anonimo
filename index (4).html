@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzón de Opiniones</title>
+    <style>
+        body {
+            background-color: #ff0000; /* Fondo rojo */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden; /* Oculta la imagen que se extiende más allá del contenedor */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            text-align: justify; /* Ajusta el texto */
+            line-height: 1.6; /* Espaciado de línea */
+            padding: 0 20px; /* Añade un relleno horizontal */
+        }
+        textarea {
+            width: calc(100% - 22px); /* Tamaño menos el ancho del scroll */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            position: relative;
+            z-index: 1; /* Coloca el botón por encima de la imagen */
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff0000; /* Cambia el color de fondo del botón */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #cc0000; /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+        }
+        .background-image {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 0; /* Asegura que la imagen esté detrás de todo */
+        }
+        .small-image {
+            display: block;
+            margin: 60px 10px; /* Ajusta el margen horizontal */
+            max-width: 190px; /* Tamaño máximo de la imagen */
+            float: left; /* Alinea la imagen a la izquierda */
+        }
+        .small-image-right {
+            display: block;
+            margin: 45px 50px 50px auto; 
+            max-width: 80px; /* Tamaño máximo de la imagen */
+            float: right; /* Alinea la imagen a la derecha */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buzón Anónimo CCEP</h1>
+        <p>Este buzón surge como solución para cualquier persona que necesite ayuda en cualquier consulta, quiera exponernos cualquier caso de manera anónima por cualquier circunstancia o bien quiere que expongamos cualquier pregunta en las reuniones de empresa. Somos y estamos por vosotros y con vosotros. Seamos también la imagen o cara de aquellas personas que lo necesiten.</p>
+        <p>¡Bienvenido! Por favor, deja tu opinión:</p>
+        <form action="https://formspree.io/f/myyrnkoa" method="post">
+            <textarea name="opinion" rows="9" placeholder="Escribe tu opinión aquí..."></textarea><br>
+            <center>
+            <input type="submit" value="Enviar">
+                </center>
+            <img class="small-image" src="cc.jpg" alt="CC Image">
+            <img class="small-image-right" src="ccc.jpg" alt="CCC Image">
+            <img class="background-image" src="cc_background.jpg" alt="">
+        </form>
+    </div>
+</body>
+</html>
